@@ -142,6 +142,14 @@ public class Main {
          * Operators
          * */
         {
+            // Casting
+            int i = 5;
+            long l = 10;
+
+            //int result = i + l; Doesn't compile.
+            int result = i;
+            result += l; // implicit casting
+
             // instanceof
             System.out.println("null instanceof String");
             System.out.println(null instanceof String); // always false!
