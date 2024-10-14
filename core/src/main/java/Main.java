@@ -45,7 +45,12 @@ public class Main {
             // boolean bool = 0; // Doesn't compile
 
             byte b = 100;
+            byte b1 = (byte) (127 + 21);
+            System.out.println("(byte) (127 + 21)");
+            System.out.println(b1); // -108
+
             //byte b1 = 300; // Doesn't compile
+            //byte b1 = 127 + 21; // Doesn't compile
 
             short s = 100;
 
@@ -79,6 +84,58 @@ public class Main {
             char c2 = '\u0061';
             System.out.println("char c2 = '\\u0061'");
             System.out.println(c2); // a
+
+            char c3 = 'A';
+            int ci = c3;
+            System.out.println("int ci = c3");
+            System.out.println(ci); // 65
+
+            // Wrapper classes
+            Boolean aBoolean = Boolean.TRUE;
+            System.out.println("Boolean.TRUE");
+            System.out.println(aBoolean); // true
+
+            aBoolean = Boolean.FALSE;
+            System.out.println("Boolean.FALSE");
+            System.out.println(aBoolean); // false
+
+            Boolean nullBoolean = null;
+            System.out.println("Boolean nullBoolean = null");
+            System.out.println(nullBoolean); // null
+
+            System.out.println("Boolean nullBoolean = null");
+            System.out.println("nullBoolean.toString()");
+            System.out.println("NullPointerException");
+
+            // Bool aBoolean = Boolean.TRUE; // Doesn't compile!
+
+            System.out.println("Boolean.valueOf(\"true\")");
+            System.out.println(Boolean.valueOf("true")); // true
+
+            System.out.println("Boolean.valueOf(\"tRuE\")");
+            System.out.println(Boolean.valueOf("tRuE")); // true
+
+            System.out.println("Boolean.valueOf(\"false\")");
+            System.out.println(Boolean.valueOf("false")); // false
+
+            System.out.println("Boolean.valueOf(\"abc\")");
+            System.out.println(Boolean.valueOf("abc")); // false
+
+            System.out.println("Boolean.valueOf(null)");
+            System.out.println(Boolean.valueOf(null)); // false
+
+
+            Integer aInteger = Integer.valueOf("10");
+            System.out.println("Integer.valueOf(\"10\")");
+            System.out.println(aInteger); // 10
+
+            System.out.println("Integer.valueOf(\"abc\")");
+            //Integer.valueOf("abc");
+            System.out.println("NumberFormatException");
+
+            System.out.println("Integer.valueOf(null)");
+            //Integer.valueOf(null);
+            System.out.println("NumberFormatException");
         }
 
         /*
@@ -96,6 +153,12 @@ public class Main {
          * String
          * */
         {
+            String s = "";
+            String aString = new String();
+
+            // Text block
+            //String s = """"""; Does not compile
+
             // String Pool
             String s1 = "aBcd";
             String s2 = "aBcd";
