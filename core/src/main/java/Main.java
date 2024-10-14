@@ -157,7 +157,16 @@ public class Main {
             String aString = new String();
 
             // Text block
-            //String s = """"""; Does not compile
+            //String textBlock = """"""; Does not compile
+            String textBlock = """
+                    A \
+                    B \
+                    C \s
+                    D
+                    E
+                    """;
+            System.out.println("Text block");
+            System.out.println(textBlock); // A B C\n D\n E\n
 
             // String Pool
             String s1 = "aBcd";
